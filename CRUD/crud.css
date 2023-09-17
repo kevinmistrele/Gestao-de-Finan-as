@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(imgs/imagem.jpg);
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 90%;
+  height: 80%;
+  border-radius: 10px;
+  background: white;
+  box-shadow:  2px 2px 10px;
+  position: relative;
+}
+
+.header {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto 12px;
+  padding-bottom: 20px;
+}
+
+.header span {
+  font-weight: 900;
+  font-size: 20px;
+  border-bottom: 2px solid #333;
+  border-right: 4px solid #333;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-color: #dfdfdf;
+  transition: 0.5s;
+}
+
+.header .total-money{
+    background-color: rgb(42, 207, 42);
+    color: white;
+    margin-left: 500px
+}
+
+
+#input-busca{
+    width: 90%;
+    margin-left: 55px;
+    border-radius: 8px;
+    padding-left: 6px;
+    padding: 5px 10px;
+    border: none;
+    border: 1px solid #dfdfdf;
+    margin-bottom: 15px;
+}
+
+
+#new {
+  position: absolute;  
+  top: 390px;  
+  font-size: 16px;
+  padding: 15px 45px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: #3939e2;
+  text-transform: uppercase;
+  transition: box-shadow 1s ease;
+}
+
+#new:hover{
+    background-color: rgb(90, 90, 247);
+}
+
+.divTable {
+  padding: 10px;
+  width: auto; 
+  height:inherit; 
+  overflow:auto;
+}
+
+.divTable::-webkit-scrollbar {
+  width: 12px;
+  background-color: whitesmoke; 
+}
+
+.divTable::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: darkgray; 
+}
+
+table {
+  width: 100%;
+  border-spacing: 10px;
+  word-break: break-all;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: rgb(167, 167, 241);
+}
+
+tr {
+  border-bottom: 1px solid rgb(238, 235, 235)!important;
+}
+
+tbody tr td {
+  vertical-align: text-top;
+  padding: 6px;
+  max-width: 50px;
+}
+
+thead tr th {
+  padding: 5px;
+  text-align: start;
+  margin-bottom: 50px;
+}
+
+tbody tr {
+  margin-bottom: 50px;
+}
+
+thead tr th.acao {
+  width: 100px!important;
+  text-align: center;
+}
+
+tbody tr td.acao {
+  text-align: center;
+}
+
+
+
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.modal header{
+    background-color: #3939e2;
+    text-align: center;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.modal label {
+  font-size: 14px;
+  width: 100%;
+  font-weight: bold
+}
+
+.modal input {
+  width: 100%;
+  outline: none;
+  padding: 5px 10px; 
+  width: 100%;
+  margin-bottom: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.modal button {
+  width: 100%;
+  margin: 10px auto;
+  outline: none;
+  border-radius: 20px; 
+  padding: 10px 10px; 
+  width: 100%;
+  border: none;
+  background-color: rgb(57, 57, 226);
+  color: white;
+}
+
+.modal button:hover{
+    background-color: rgb(90, 90, 247);
+}
+
+.active {
+  display: flex;
+}
+
+.active .modal {
+  animation: modal .4s;
+}
+
+
+
+td button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+td button i {
+  font-size: 25px;
+}
+
+td button i:first-child {
+  margin-right: 10px;
+}
+
+
+@media (max-width: 700px) {
+  body {
+    font-size: 16px; 
+  }
+
+  .header{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .header span{
+    align-content: center;
+  }
+
+  #input-busca{
+    padding: 10px 10px;
+    margin: 0 0 0px 20px;
+  }
+  
+
+  .total-money {
+    display: none;
+  }
+
+  #tabela-gastos{
+    text-align: left;
+  }
+
+  
+  #new{
+    align-content: center;
+    margin-top: 50px;
+  }
+
+  .divTable{
+    transform: rotate(-90deg);
+    margin-left: 80px;
+    margin-top: -60px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+
+  }
+  #tabela-gastos th {
+    writing-mode: vertical-rl; 
+    transform: rotate(360deg); 
+    text-align: left; 
+    vertical-align: bottom; 
+    white-space: nowrap;
+    width: 100px; 
+  }
+
+  
+  tbody td {
+    white-space: nowrap;
+    writing-mode: vertical-lr;
+    text-align: left; 
+    padding: 10px; 
+    border-bottom: 1px solid #ddd; 
+  }
+  
+  
+  td:first-child,
+  th:first-child {
+    width: 20px; 
+  }
+  
+  
+  
+  
+  #tabela-gastos thead{
+    margin-left: 10px;
+  }
+
+  .modal{
+    width: 80%;
+  }
+
+  
+
+}
+
+@media (max-width: 630px) {
+  .divTable{
+    margin-left: 100px;
+    margin-top: -90px;
+  }
+
+  table{
+    padding-bottom: 50px;
+  }
+
+  #input-busca{
+    margin-right: 10px;
+  }
+
+  .modal{
+    width: 90%;
+  }
+}

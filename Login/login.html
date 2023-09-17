@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Gestão de Gastos Pessoais - Login</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" name="email" required>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <script>
+        alert('O email é: kevinmistrele@email.com; Senha: mecontrata')
+        // Dados de usuário de teste (substitua isso com uma autenticação real)
+        const userCredentials = {
+            email: "kevinmistrele@email.com",
+            password: "mecontrata"
+        };
+    
+        const loginForm = document.getElementById("loginForm");
+        const feedbackMessage = document.createElement("p");
+    
+        loginForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+    
+            // Obter os valores inseridos pelo usuário
+            const emailInput = document.getElementById("email").value;
+            const passwordInput = document.getElementById("password").value;
+    
+            // Simular autenticação com os dados de usuário de teste
+            if (emailInput === userCredentials.email && passwordInput === userCredentials.password) {
+                // Autenticação bem-sucedida, redirecionar o usuário
+                window.location.href = "/CRUD/crud.html"; // Substitua "dashboard.html" com a página desejada após o login
+            } else {
+                // Exibir mensagem de erro
+                feedbackMessage.textContent = "Credenciais inválidas. Tente novamente.";
+                feedbackMessage.style.color = "red";
+                loginForm.appendChild(feedbackMessage);
+            }
+        });
+    </script>
+    
+</body>
+</html>
